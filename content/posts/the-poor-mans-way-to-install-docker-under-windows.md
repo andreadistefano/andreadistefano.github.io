@@ -57,19 +57,27 @@ This will allow us to use the `docker` command from PowerShell, VS Code or any o
 ### Install Docker
 1. Install [Docker](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) inside WSL2.
 2. Add your user to the `docker` group: `sudo usermod -aG docker $USER`.
-3. Edit the `docker.service` file: `sudo -e /lib/systemd/system/docker.service`, replacing the line
+3. Override the `docker.service` file: `sudo systemctl edit docker` adding the following text
+
     ```
-    ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-    ```
-    with
-    ```
+    [Service]
+    ExecStart=
     ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375 --containerd=/run/containerd/containerd.sock
     ```
+   between
+   
+    `### Anything between here and the comment below will become the new contents of the file`
+
+   and
+
+   `### Lines below this comment will be discarded`
+
+   
     In this way, Docker will listen on a TCP socket on port `2375` (feel free to change it if you want) and we will be able to connect to the Docker Engine from Windows.
-4. Reload the `systemd` daemon: `sudo systemctl daemon-reload`.
-5. Restart the Docker service: `sudo systemctl restart docker.service`.
-6. Enable the Docker service to start automatically: `sudo systemctl enable docker.service`.
-7. Optionally, you can install `keychain` to make sure you WSL will not be killed when you close the last shell window[^2]:
+6. Reload the `systemd` daemon: `sudo systemctl daemon-reload`.
+7. Restart the Docker service: `sudo systemctl restart docker.service`.
+8. Enable the Docker service to start automatically: `sudo systemctl enable docker.service`.
+9. Optionally, you can install `keychain` to make sure you WSL will not be killed when you close the last shell window[^2]:
     1. `sudo apt update && sudo apt install keychain -y`
     2. `sudo -e /etc/profile.d/keep_wsl_running.sh`
     3. Paste this
