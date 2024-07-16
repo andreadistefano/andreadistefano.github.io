@@ -65,14 +65,14 @@ This will allow us to use the `docker` command from PowerShell, VS Code or any o
     ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375 --containerd=/run/containerd/containerd.sock
     ```
    between
-   
+
     `### Anything between here and the comment below will become the new contents of the file`
 
    and
 
    `### Lines below this comment will be discarded`
 
-   
+
     In this way, Docker will listen on a TCP socket on port `2375` (feel free to change it if you want) and we will be able to connect to the Docker Engine from Windows.
 6. Reload the `systemd` daemon: `sudo systemctl daemon-reload`.
 7. Restart the Docker service: `sudo systemctl restart docker.service`.
@@ -106,6 +106,24 @@ This is the worst, but I haven't found a way to avoid it.
 11. Create a new environment variable called `DOCKER_HOST` with the value `tcp://localhost:2375`.
 12. Close all your Windows Terminal windows and start a new one.
 12. If everything works, you should be able to run `docker version` in PowerShell and see the output of the Docker Engine running inside WSL2.
+
+
+### Use `cgroupsv2`
+
+Thanks to [@spurin](https://github.com/spurin) and his [GitHub repo](https://github.com/spurin/wsl-cgroupsv2).
+
+1. Create a text file called `.wslconfig` in your Windows user folder (be careful with the extension, it should not be `.wslconfig.txt`).
+2. Add the following content:
+    ```
+    [wsl2]
+    kernelCommandLine = cgroup_no_v1=all systemd.unified_cgroup_hierarchy=1
+    ```
+3. Restart WSL2 from PowerShell: `wsl --shutdown`.
+4. Open a new WSL2 shell and check if `cgroupsv2` is enabled using an ad-hoc docker image:
+    ```bash
+    docker run -it --rm spurin/wsl-cgroupsv2:latest
+    ```
+    If you see `Success: cgroup type is cgroup2fs` in the output, you are good to go.
 
 [^1]: I can hear some of you saying "What do you mean, install PowerShell?". I had the same reaction. It turns out, the default Windows PowerShell is not the same as the new PowerShell 7. I'll have a blog post here at some point about that.
 
