@@ -15,8 +15,6 @@ defaultContentLanguage = "en" # For HTML page, now support: en, zh-hans, zh-hant
 summaryLength = 100 # Custom summary length, add <!--more--> in post file to custom split point
 paginate = 10
 
-# googleAnalytics = "UA-000000000-0" # Set your Google Analytics UA here
-
 [outputFormats]
 [outputFormats.SearchIndex]
 isPlainText = true
@@ -38,15 +36,6 @@ defaultTheme = "auto"              # default theme when first visit (auto|dark|l
 # Source URL of the website, will appear in the footer
 sourceURL = "https://github.com/andreadistefano/andreadistefano.github.io"
 
-# Use CloudFlare Workers to accelerate the Google Analytics
-# If you are using this please comment the googleAnalytics above
-# Check https://github.com/SukkaW/cloudflare-workers-async-google-analytics for more details
-# googleAnalyticsTid = "UA-000000000-0"
-# googleAnalyticsRoute = "https://*.*.workers.dev/"
-
-# Google AdSense
-# The AdSense code will be inserted between the head tags of your site.
-# googleAdsense = "0000000000000000"
 
 # Word counter and read time indicator in post metadata
 showWordCounter = true
