@@ -135,27 +135,33 @@ summaryLength = 100 # Custom summary length, add <!--more--> in post file to cus
     name = "GitHub"
     url = "https://github.com/andreadistefano"
     weight = 1
-    pre = "fa-brands fa-github"
+    [menu.link.params]
+      icon = "fa-brands fa-github"
   [[menu.link]]
     name = "Twitter"
     url = "https://twitter.com/FratelloBigio"
     weight = 2
-    pre = "fa-brands fa-twitter"
+    [menu.link.params]
+      icon = "fa-brands fa-twitter"
   [[menu.link]]
     name = "Bluesky"
     url = "https://bsky.app/profile/fratellobigio.com"
     weight = 3
-    pre = "fa-brands fa-bluesky"
+    [menu.link.params]
+      icon = "fa-brands fa-bluesky"
   [[menu.link]]
     name = "Mastodon"
     url = "https://hachyderm.io/@FratelloBigio"
     weight = 4
-    pre = "fa-brands fa-mastodon"
+    [menu.link.params]
+      rel="me"
+      icon = "fa-brands fa-mastodon"
   [[menu.link]]
     name = "LinkedIn"
     url = "https://www.linkedin.com/in/andrea-di-stefano-aq/"
     weight = 5
-    pre = "fa-brands fa-linkedin"
+    [menu.link.params]
+      icon = "fa-brands fa-linkedin"
 
 [build]
 noJSConfigInAssets = true
