@@ -1,4 +1,3 @@
-[submodule "themes/fuji"]
-	path = themes/fuji
-	url = https://github.com/andreadistefano/hugo-theme-fuji.git
-	branch = main
+[submodule "themes/kita"]
+	path = themes/kita
+	url = https://github.com/andreadistefano/hugo-theme-kita.git
