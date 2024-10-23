@@ -1,5 +1,5 @@
 baseURL = "https://fratellobigio.com/"
-title = "andrea"
+title = "FratelloBigio"
 
 theme = "fuji"
 hasCJKLanguage = false
@@ -13,7 +13,9 @@ languageCode = "en"           # For RSS, view https://www.rssboard.org/rss-langu
 defaultContentLanguage = "en" # For HTML page, now support: en, zh-hans, zh-hant, ja, nl, pl, it
 
 summaryLength = 100 # Custom summary length, add <!--more--> in post file to custom split point
-paginate = 10
+
+[pagination]
+  pagerSize = 10
 
 [outputFormats]
 [outputFormats.SearchIndex]
@@ -29,9 +31,9 @@ home = ["HTML", "RSS", "SearchIndex"]
 post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
 
 [params]
-author = "andrea"                # You can also set author in post front matter individually
-subTitle = "idk, just a blog"    # Subtitle of the website
-defaultTheme = "auto"              # default theme when first visit (auto|dark|light)
+author = "FratelloBigio"      # You can also set author in post front matter individually
+subTitle = "idk, just a blog" # Subtitle of the website
+defaultTheme = "auto"         # default theme when first visit (auto|dark|light)
 
 # Source URL of the website, will appear in the footer
 sourceURL = "https://github.com/andreadistefano/andreadistefano.github.io"

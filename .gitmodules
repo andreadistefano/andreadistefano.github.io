@@ -1,3 +1,4 @@
 [submodule "themes/fuji"]
 	path = themes/fuji
 	url = https://github.com/andreadistefano/hugo-theme-fuji.git
+	branch = main
