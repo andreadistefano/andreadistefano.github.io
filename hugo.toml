@@ -19,10 +19,10 @@ summaryLength = 100 # Custom summary length, add <!--more--> in post file to cus
 
 [outputFormats]
   [outputFormats.SearchIndex]
-  isPlainText = true
-  notAlternative = true
-  mediaType = "application/json"
-  path = "/search/"
+    isPlainText = true
+    notAlternative = true
+    mediaType = "application/json"
+    path = "/search/"
 
 [outputs]
   home = ["HTML", "RSS", "SearchIndex"]
@@ -58,7 +58,7 @@ summaryLength = 100 # Custom summary length, add <!--more--> in post file to cus
 
   # Open Graph & Twitter Card variables
   # You can also set description and images in post front matter individually
-  # description = "A minimal Hugo theme with nice theme color."
+  # description = " A minimal Hugo theme with a nice color scheme. "
   # og = "/img/og.png" # This will use the image called og.png in static/img folder
 
   # Posts shown in homepage
