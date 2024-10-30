@@ -1,5 +1,5 @@
 ---
-title: "The poor man's way to Install Docker under Windows (without Docker Desktop)"
+title: "The poor man's way to install Docker under Windows (without Docker Desktop)"
 date: 2023-07-31T17:12:08+02:00
 draft: false
 showToc: true

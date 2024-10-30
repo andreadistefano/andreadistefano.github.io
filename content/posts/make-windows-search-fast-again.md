@@ -9,11 +9,11 @@ tags: ["windows", "how-to"]
 To me, one of the most useful features of Windows is the Search you get by hitting the Windows key on your keyboard and then typing whatever you want. This is the way to make it work for you, instead of earning money for Microsoft.
 <!--more-->
 
-## The problem
+## The Problem
 
 Letting us open programs or files on our own PC's doesn't earn Microsoft any money, so they gradually built ads and web searches into their search, making it slow and extremely unreliable.
 
-## The solution
+## The Solution
 
 * Open `regedit`.
 * Head to `Computer\HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search`.
