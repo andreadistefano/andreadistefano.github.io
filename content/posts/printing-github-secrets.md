@@ -3,7 +3,7 @@ title: "Printing Github Secrets"
 date: 2025-01-08T16:51:40+01:00
 draft: false
 showToc: true
-tags: ["docker", "windows", "wsl2", "how-to"]
+tags: ["github", "github-actions", "how-to"]
 ---
 
 Happy new year! 🎉 \
