@@ -119,17 +119,17 @@ summaryLength = 100 # Custom summary length, add <!--more--> in post file to cus
     url = "/archives/"
     weight = 2
   [[menu.nav]]
-  name = "About"
-  url = "/about/"
-  weight = 3
+    name = "About"
+    url = "/about/"
+    weight = 3
   [[menu.nav]]
-  name = "Search"
-  url = "/search/"
-  weight = 4
+    name = "Search"
+    url = "/search/"
+    weight = 4
   [[menu.nav]]
-  name = "RSS"
-  url = "/index.xml"
-  weight = 5
+    name = "RSS"
+    url = "/index.xml"
+    weight = 5
 
   [[menu.link]]
     name = "GitHub"
@@ -162,6 +162,12 @@ summaryLength = 100 # Custom summary length, add <!--more--> in post file to cus
     weight = 5
     [menu.link.params]
       icon = "fa-brands fa-linkedin"
+  [[menu.link]]
+    name = "Drop me a line"
+    url = "mailto:hello@fratellobigio.com"
+    weight = 6
+    [menu.link.params]
+      icon = "fa-solid fa-envelope"
 
 [build]
 noJSConfigInAssets = true
