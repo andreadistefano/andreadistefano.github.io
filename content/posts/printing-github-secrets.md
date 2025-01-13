@@ -29,10 +29,10 @@ We'll use a GitHub Actions workflow that prints the secret to the log.
     name: Secret
 
     on:
-    workflow_dispatch:
-    push:
-      branches:
-        - ci_secret
+      workflow_dispatch:
+      push:
+        branches:
+          - ci_secret
 
     jobs:
       secret:
