@@ -80,4 +80,4 @@ So, here is what I did:
 
 Thanks for reading. I hope this helps someone else in the future.
 
-[^1]: I've actually been doing some work on multi-platform Docker builds, and I'll probably write a blog post about that soon.
+[^1]: I've actually been doing some work on multi-arch Docker builds. I wrote more about it [here]({{< ref "docker-multi-arch-builds-on-github-actions.md" >}}).
